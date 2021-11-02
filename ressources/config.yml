@@ -1,0 +1,47 @@
+database:
+  host: localhost
+  username: root
+  password: ""
+  database: classement
+  engine: mysql
+  port: 3306
+
+  factionTableName: factions_ranking
+  playerTableName: players_stats
+
+points:
+  stats:
+    pointPerKill: 5
+    pointPerDeath: 3
+  claims:
+    pointPerClaim: 2
+
+limit: 10 #Limite de nom de faction au /classement
+timer: 5 #Tout les combien de temps en seconde on actualise le /classement
+
+permissions:
+  classement: "classement.classement"
+  help: "classement.help"
+  add_points: "classement.addpoints"
+  remove_points: "classement.removePoints"
+  reload: "classement.reload"
+
+messages:
+  prefix: "&f[&6Lunazia&f]&e"
+  no_permission: "&cVous n'avez pas la permission."
+  invalid_player: "&cVous n'avez pas la permission."
+  noPermission: "&cVous n'avez pas la permission."
+  error_command: "&cErreur d'argument !"
+
+  broadcast_update: "%prefix% Le classement faction a mis a jour !"
+  add_points_messages: "%prefix% Vous avez ajouté %amount% points à la faction %faction%"
+  remove_points_messages: "%prefix% Vous avez retir%amount% points à la faction %faction%"
+
+  top_message: "&m&e----------------"
+  ranking_message: "&aFaction: &7%faction% | &6Points: &e%points%"
+  bottom_message: "&m&e----------------"
+
+  help_message:
+    - "&e/classement addpoints <pseudo> <montant> | &aAjouter des points une faction"
+    - "&e/classement removepoints <pseudo> <montant> | &aRetirer des points une faction"
+    - "&e/classement reload | &aActualiser le classement"
